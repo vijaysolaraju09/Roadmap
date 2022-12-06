@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline-container::before,
+.list-updates::before,
+.list-updates .update::before {
+  content: "";
+}
+.timeline-container::before,
+.list-updates::before,
+.list-updates .update::before,
+.all-updates {
+  position: absolute;
+}
+.timeline-container,
+.list-updates .update,
+.list-updates {
+  position: relative;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: url("image/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-container {
+  padding: 0;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 30px;
+}
+
+.head {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 20px 0;
+  z-index: 2;
+}
+
+.head .title {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0px 5px 10px #0e01158a;
+}
+.head .details {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 0px 5px 10px #0e01158a;
+}
+.title,
+.details {
+  color: white;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.exp{
+  flex: 1;
+}
+.exp-title{
+  background-color: white;
+  color: midnightblue;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+.list-title{
+  display: inline-block;
+  transform: translateX(calc(-50% - 1rem));
+  width: auto;
+  margin-top: 2rem;
+}
+.list-updates {
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+.list-updates::before {
+  height: calc(100% + 8rem);
+  width: 2px;
+  background-color: #d1d6e6;
+  left: -1rem;
+}
+.list-updates .update {
+  background-color: #fff;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 15px -5px rgba(0, 0, 0, 0.15);
+}
+.list-updates:first-child li:first-child{
+  margin-top: 0;
+}
+.list-updates .update::before {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #d1d6e6;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(-1rem - 5px);
+}
+.list-updates:last-child::before{
+  height: calc(100% - 2rem);
+}
+.list-updates .green::before {
+  background-color: rgb(26, 224, 26);
+}
+.list-updates .red::before {
+  background-color: rgb(231, 38, 38);
+}
+
+.update .time {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.update p {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.update-title {
+  display: inline-block;
+  color: midnightblue;
+  font-weight: 700;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
